@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "title": "HTML Basics",
+    "description": "Understand the structure of web pages, tags, elements, attributes, and semantic HTML fundamentals.",
+    "duration": "30 min",
+    "category": "HTML",
+    "level": "Beginner",
+    "video": "https://www.youtube.com/embed/kUMe1FH4CHE"
+  },
+  {
+    "id": 2,
+    "title": "Advanced HTML5",
+    "description": "Learn forms, multimedia, accessibility, SEO tags, canvas, APIs, and modern HTML5 features.",
+    "duration": "45 min",
+    "category": "HTML",
+    "level": "Intermediate",
+    "video": "https://www.youtube.com/embed/pQN-pnXPaVg"
+  },
+  {
+    "id": 3,
+    "title": "HTML Forms & Validation",
+    "description": "Master HTML forms, validation, input types, labels, radio buttons, checkboxes, and accessibility tips.",
+    "duration": "25 min",
+    "category": "HTML",
+    "level": "Beginner",
+    "video": "https://www.youtube.com/embed/fNcJuPIZ2WE"
+  },
+
+  {
+    "id": 4,
+    "title": "CSS Fundamentals",
+    "description": "Learn styling basics: colors, fonts, spacing, borders, backgrounds, selectors, and layout essentials.",
+    "duration": "40 min",
+    "category": "CSS",
+    "level": "Beginner",
+    "video": "https://www.youtube.com/embed/1Rs2ND1ryYc"
+  },
+  {
+    "id": 5,
+    "title": "Flexbox & CSS Grid Mastery",
+    "description": "Master modern layouts using Flexbox and Grid. Build fully responsive structures with ease.",
+    "duration": "50 min",
+    "category": "CSS",
+    "level": "Intermediate",
+    "video": "https://www.youtube.com/embed/9zBsdzdE4sM"
+  },
+  {
+    "id": 6,
+    "title": "Responsive Web Design",
+    "description": "Understand breakpoints, fluid layouts, rem units, media queries, and mobile-first design.",
+    "duration": "55 min",
+    "category": "CSS",
+    "level": "Advanced",
+    "video": "https://www.youtube.com/embed/srvUrASNj0s"
+  },
+
+  {
+    "id": 7,
+    "title": "JavaScript Basics",
+    "description": "Learn variables, data types, operators, conditions, loops, DOM basics, and beginner JS logic.",
+    "duration": "55 min",
+    "category": "JavaScript",
+    "level": "Beginner",
+    "video": "https://www.youtube.com/embed/W6NZfCO5SIk"
+  },
+  {
+    "id": 8,
+    "title": "JavaScript DOM Manipulation",
+    "description": "Understand query selectors, events, dynamic elements, traversing DOM, and real-time DOM operations.",
+    "duration": "40 min",
+    "category": "JavaScript",
+    "level": "Intermediate",
+    "video": "https://www.youtube.com/embed/0ik6X4DJKCc"
+  },
+  {
+    "id": 9,
+    "title": "Advanced JavaScript",
+    "description": "Dive deeper into closures, promises, async/await, ES6 features, modules, and advanced functions.",
+    "duration": "1 hr",
+    "category": "JavaScript",
+    "level": "Advanced",
+    "video": "https://www.youtube.com/embed/NCwa_xi0Uuc"
+  },
+
+  {
+    "id": 10,
+    "title": "React Basics",
+    "description": "Understand components, props, JSX, state, event handling, hooks, and the basics of building SPAs.",
+    "duration": "45 min",
+    "category": "React",
+    "level": "Beginner",
+    "video": "https://www.youtube.com/embed/SqcY0GlETPk"
+  },
+  {
+    "id": 11,
+    "title": "React Hooks & State Management",
+    "description": "Master useState, useEffect, useRef, custom hooks, and state management patterns.",
+    "duration": "50 min",
+    "category": "React",
+    "level": "Intermediate",
+    "video": "https://www.youtube.com/embed/LlvBzyy-558"
+  },
+  {
+    "id": 12,
+    "title": "Advanced React Performance",
+    "description": "Learn memoization, useCallback, useMemo, lazy loading, optimization, and code splitting.",
+    "duration": "1 hr",
+    "category": "React",
+    "level": "Advanced",
+    "video": "https://www.youtube.com/embed/IFNHRSM2Y2o"
+  }
+]
+
