@@ -1,83 +1,81 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
-// LocalStorage keys
-const LS_USER = "ssl_user";
-const LS_COMPLETED = "ssl_completed_lessons";
-
 export function AuthProvider({ children }) {
+  // Logged in user
   const [user, setUser] = useState(null);
-  const [completedLessons, setCompletedLessons] = useState([]); // array of course IDs
-  const [loading, setLoading] = useState(true);
 
-  // Load from localStorage on first render
+  // Completed lessons stored in localStorage
+  const [completedLessons, setCompletedLessons] = useState([]);
+
+  // Load stored values on refresh
   useEffect(() => {
-    const storedUser = localStorage.getItem(LS_USER);
-    const storedCompleted = localStorage.getItem(LS_COMPLETED);
+    const storedUser = JSON.parse(localStorage.getItem("ssp_user"));
+    const storedLessons = JSON.parse(localStorage.getItem("ssp_completed")) || [];
 
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-
-    if (storedCompleted) {
-      setCompletedLessons(JSON.parse(storedCompleted));
-    }
-
-    setLoading(false);
+    if (storedUser) setUser(storedUser);
+    setCompletedLessons(storedLessons);
   }, []);
 
-  // ---------- AUTH ----------
+  // Save completed lessons to storage
+  useEffect(() => {
+    localStorage.setItem("ssp_completed", JSON.stringify(completedLessons));
+  }, [completedLessons]);
 
-  const signup = ({ name, email, password }) => {
-    const newUser = { name, email, password, createdAt: new Date().toISOString() };
+  // --- AUTH FUNCTIONS ---
+
+  function signup(name, email, password) {
+    const newUser = { name, email };
+    localStorage.setItem("ssp_user", JSON.stringify(newUser));
     setUser(newUser);
-    localStorage.setItem(LS_USER, JSON.stringify(newUser));
-  };
+  }
 
-  const login = (email, password) => {
-    const stored = localStorage.getItem(LS_USER);
-    if (!stored) return false;
+  function login(email, password) {
+    const storedUser = JSON.parse(localStorage.getItem("ssp_user"));
+    if (!storedUser) return false;
 
-    const savedUser = JSON.parse(stored);
-    if (savedUser.email === email && savedUser.password === password) {
-      setUser(savedUser);
+    if (storedUser.email === email) {
+      setUser(storedUser);
       return true;
     }
     return false;
-  };
+  }
 
-  const logout = () => {
+  function logout() {
     setUser(null);
-    // you can keep completedLessons for same device, so not clearing here
-  };
+  }
 
-  // ---------- LESSON COMPLETION ----------
+  // --- COURSE SYSTEM FUNCTIONS ---
 
-  const markLessonCompleted = (courseId) => {
-    if (!completedLessons.includes(courseId)) {
-      const updated = [...completedLessons, courseId];
+  function markLessonCompleted(id) {
+    if (!completedLessons.includes(id)) {
+      const updated = [...completedLessons, id];
       setCompletedLessons(updated);
-      localStorage.setItem(LS_COMPLETED, JSON.stringify(updated));
+      localStorage.setItem("ssp_completed", JSON.stringify(updated));
     }
-  };
+  }
 
-  const isLessonCompleted = (courseId) => completedLessons.includes(courseId);
+  function isLessonCompleted(id) {
+    return completedLessons.includes(id);
+  }
 
-  const getCompletedCount = () => completedLessons.length;
+  function getCompletedCount() {
+    return completedLessons.length;
+  }
 
   return (
     <AuthContext.Provider
       value={{
         user,
-        loading,
         signup,
         login,
         logout,
+
+        completedLessons,
         markLessonCompleted,
         isLessonCompleted,
         getCompletedCount,
-        completedLessons,
       }}
     >
       {children}
@@ -88,3 +86,4 @@ export function AuthProvider({ children }) {
 export function useAuth() {
   return useContext(AuthContext);
 }
+

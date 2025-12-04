@@ -29,7 +29,8 @@ export default function CourseDetail() {
           <Sidebar />
 
           <main className="flex-1 pt-28 pb-10 md:pl-6">
-            {/* Back */}
+
+            {/* Back Button */}
             <div className="mb-4 flex items-center">
               <Link
                 to="/courses"
@@ -41,8 +42,10 @@ export default function CourseDetail() {
             </div>
 
             <div className="grid lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] gap-5">
-              {/* Video + summary */}
+
+              {/* LEFT: VIDEO + DESCRIPTION */}
               <section className="space-y-4">
+
                 {/* Video */}
                 <div className="rounded-3xl overflow-hidden border border-white/10 bg-slate-900/80 shadow-[0_25px_80px_rgba(15,23,42,1)]">
                   <div className="aspect-video">
@@ -50,7 +53,6 @@ export default function CourseDetail() {
                       src={course.video}
                       title={course.title}
                       className="w-full h-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
                   </div>
@@ -62,17 +64,20 @@ export default function CourseDetail() {
                   <p className="text-xs text-slate-300 mb-3">
                     {course.description}
                   </p>
+
                   <p className="text-[11px] text-slate-400">
-                    Category: <span className="text-slate-200">{course.category}</span> •{" "}
-                    Level: <span className="text-slate-200">{course.level}</span> •{" "}
+                    Category: <span className="text-slate-200">{course.category}</span> •
+                    Level: <span className="text-slate-200">{course.level}</span> •
                     Duration: <span className="text-slate-200">{course.duration}</span>
                   </p>
                 </div>
+
               </section>
 
-              {/* Side panel */}
+              {/* RIGHT: SIDE PANEL */}
               <aside className="space-y-4">
-                {/* Status / Complete button */}
+
+                {/* Status */}
                 <div className="rounded-3xl bg-gradient-to-br from-purple-600 via-indigo-600 to-sky-500 p-[1px] shadow-[0_25px_80px_rgba(59,7,100,1)]">
                   <div className="rounded-[1.4rem] bg-slate-950/95 p-4">
                     <p className="text-[11px] uppercase tracking-[0.25em] text-slate-400 mb-2">
@@ -106,18 +111,20 @@ export default function CourseDetail() {
                   </div>
                 </div>
 
-                {/* What you'll learn */}
+                {/* What you’ll learn */}
                 <div className="rounded-3xl bg-slate-900/80 border border-white/10 p-4 text-xs text-slate-300">
                   <p className="text-[11px] uppercase tracking-[0.25em] text-slate-400 mb-2">
                     What you will learn
                   </p>
                   <ul className="space-y-1 list-disc list-inside">
                     <li>Core concepts behind this topic</li>
-                    <li>Practical examples you can reuse</li>
-                    <li>Best practices used in the industry</li>
+                    <li>Reusable practical examples</li>
+                    <li>Industry best practices</li>
                   </ul>
                 </div>
+
               </aside>
+
             </div>
           </main>
         </div>
