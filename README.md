@@ -101,38 +101,29 @@ student-skill-portal/
 └── README.md
 ## 🖼 Screenshots
 
-### 🏠 Home Page
-![Home Page](./screenshots/home.png)
+### 🏠 about Page
+![about page](./screenshots/about.png)
 
-### 📊 Dashboard
-![Dashboard](./screenshots/dashboard.png)
 
-### 📚 Courses Page
-![Courses](./screenshots/courses.png)
+### 📞 Contact page
+![Contact page](./screenshots/courses.png)
 
 ### ▶️ Course Detail
 ![Course Detail](./screenshots/course-detail.png)
 
-### 📰 News & Insights
-![News](./screenshots/news.png)
-## 🖼 Screenshots
+### 📊 Dashboard
+![ Dashboard](./screenshots/dashboard.png)
 
-> Add these images inside your project folder:  
-> **/screenshots/login.png**  
-> **/screenshots/signup.png**  
-> **/screenshots/contact.png**  
-> **/screenshots/about.png**  
+###  Home page
+![Home Page](./screenshots/home.png)
 
-### 🔐 Login Page
-![Login Page](./screenshots/login.png)
+### 📝 login Page
+![login Page](./screenshots/login.png)
 
-### 📝 Signup Page
-![Signup Page](./screenshots/signup.png)
+###  news Page
+![news  Page](./screenshots/news.png)
 
-### 📞 Contact Page
-![Contact Page](./screenshots/contact.png)
-
-### ℹ️ About Page
-![About Page](./screenshots/about.png)
+### ℹ️ Sign Page
+![signup Page](./screenshots/signup.png)
 
 ---
