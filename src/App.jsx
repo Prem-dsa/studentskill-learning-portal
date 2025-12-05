@@ -13,6 +13,7 @@ import BlogDetail from "./pages/BlogDetail";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
 
 import Dashboard from "./pages/Dashboard";
 import Courses from "./pages/Courses";
@@ -38,6 +39,8 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blog" element={<Blog />} />
+
 
         {/* ⚡ Learning Pages */}
         <Route path="/dashboard" element={<Dashboard />} />
