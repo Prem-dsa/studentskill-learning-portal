@@ -99,31 +99,33 @@ student-skill-portal/
 │
 ├── package.json
 └── README.md
-## 🖼 Screenshots
+## 📸 Screenshots
 
-### 🏠 about Page
-![about page](./screenshots/about.png)
+### 🏠 About Page
+![about page](./src/screenshots/about.png)
 
-
-### 📞 Contact page
-![Contact page](./screenshots/courses.png)
+### 📞 Contact Page
+![Contact page](./src/screenshots/contact.png)
 
 ### ▶️ Course Detail
-![Course Detail](./screenshots/course-detail.png)
+![Course Detail](./src/screenshots/course-detail.png)
 
 ### 📊 Dashboard
-![ Dashboard](./screenshots/dashboard.png)
+![Dashboard](./src/screenshots/dashboard.png)
 
-###  Home page
-![Home Page](./screenshots/home.png)
+### 🏡 Home Page
+![Home Page](./src/screenshots/home.png)
 
-### 📝 login Page
-![login Page](./screenshots/login.png)
+### 📝 Login Page
+![Login Page](./src/screenshots/login.png)
 
-###  news Page
-![news  Page](./screenshots/news.png)
+### 📰 News Page
+![News Page](./src/screenshots/news.png)
 
-### ℹ️ Sign Page
-![signup Page](./screenshots/signup.png)
+### ℹ️ Sign Up Page
+![Sign Up Page](./src/screenshots/signup.png)
+
+
+
 
 ---
