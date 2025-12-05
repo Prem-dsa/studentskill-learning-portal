@@ -124,7 +124,8 @@ student-skill-portal/
 
 ### ℹ️ Sign Up Page
 ![Sign Up Page](./src/screenshots/signup.png)
-
+## Profile page
+![profile page](./src/screenshots/profile.png)
 
 
 
