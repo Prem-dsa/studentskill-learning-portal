@@ -1,36 +1,24 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import blogPosts from "../data/blogPosts";
 
 export default function BlogDetail() {
   const { id } = useParams();
-  const post = blogPosts.find((p) => p.id === id);
-
-  if (!post) {
-    return (
-      <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center">
-        <p>Article not found.</p>
-      </div>
-    );
-  }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white pt-32 px-6 md:px-16 max-w-3xl mx-auto">
-      <Link
-        to="/blog"
-        className="text-[11px] text-slate-400 hover:text-white mb-4 inline-block"
-      >
-        ← Back to all insights
-      </Link>
+    <div className="min-h-screen bg-slate-950 text-white pt-32 pb-20">
+      <div className="max-w-4xl mx-auto px-4">
+        <Link to="/blog" className="text-slate-400 text-sm hover:text-white">
+          ← Back to News
+        </Link>
 
-      <p className="text-[11px] text-slate-400">
-        {post.date} • {post.readTime}
-      </p>
-      <h1 className="text-3xl md:text-4xl font-bold mt-1 mb-4">{post.title}</h1>
+        <h1 className="text-3xl font-bold mt-4 mb-4">Blog Article #{id}</h1>
 
-      <p className="text-sm text-slate-300 whitespace-pre-line">
-        {post.content}
-      </p>
+        <p className="text-slate-300 text-lg leading-relaxed">
+          This is the detailed article content. You can replace this with actual blog text,
+          images, insights, and more. Each article is dynamically loaded using the ID.
+        </p>
+      </div>
     </div>
   );
 }
+

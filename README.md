@@ -1,16 +1,138 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎓 SkillSphere – Student Skill Learning Portal
 
-Currently, two official plugins are available:
+A modern, responsive, and interactive learning platform designed for students to learn web development skills such as **HTML, CSS, JavaScript, and React** through structured lessons, videos, progress tracking, and a clean dashboard UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is built with **React + Tailwind CSS + Framer Motion** and includes multiple premium pages like Dashboard, Courses, Careers, About, Contact, and more.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Project Overview
 
-## Expanding the ESLint configuration
+SkillSphere is a learning portal created to help students gain real-world skills with:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Curated video lessons
+- Dashboard progress tracking
+- User-friendly UI
+- Course details & completion tracking
+- Responsive design
+- Professional landing pages
+
+This project demonstrates **frontend skills**, UI design knowledge, routing, local storage auth logic, animations, and reusable component structure.
+
+---
+
+## ⭐ Features
+
+### 📘 Core Learning System
+- Interactive Dashboard  
+- Courses grid (HTML, CSS, JS, React)  
+- Video-based learning  
+- Mark lessons as completed (LocalStorage)  
+- Track progress  
+
+### 🧭 Fully Designed Pages
+- Homepage / Focus Areas  
+- How We Work  
+- About Page  
+- Careers Page  
+- Contact Page  
+- News & Insights  
+- Blog Detail Page  
+
+### 🔐 Authentication
+- Login  
+- Signup  
+- (Optional) Protected Routes  
+
+### 🎨 UI & UX
+- Premium dark mode design  
+- Gradient effects  
+- Animations using **Framer Motion**  
+- Beautiful Navbar + Footer  
+
+### ⚙️ Technical Features
+- React Router  
+- LocalStorage-based user system  
+- JSON course data  
+- Component-based architecture  
+
+---
+
+## 📂 Folder Structure
+
+student-skill-portal/
+│
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── CourseCard.jsx
+│   │   └── PrivateRoute.jsx
+│   │
+│   ├── pages/
+│   │   ├── Homepage.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Courses.jsx
+│   │   ├── CourseDetail.jsx
+│   │   ├── Login.jsx
+│   │   ├── Signup.jsx
+│   │   ├── About.jsx
+│   │   ├── Careers.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Focus.jsx
+│   │   ├── Work.jsx
+│   │   ├── News.jsx
+│   │   └── BlogDetail.jsx
+│   │
+│   ├── data/
+│   │   └── courses.json
+│   │
+│   ├── context/
+│   │   └── AuthContext.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── package.json
+└── README.md
+## 🖼 Screenshots
+
+### 🏠 Home Page
+![Home Page](./screenshots/home.png)
+
+### 📊 Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
+### 📚 Courses Page
+![Courses](./screenshots/courses.png)
+
+### ▶️ Course Detail
+![Course Detail](./screenshots/course-detail.png)
+
+### 📰 News & Insights
+![News](./screenshots/news.png)
+## 🖼 Screenshots
+
+> Add these images inside your project folder:  
+> **/screenshots/login.png**  
+> **/screenshots/signup.png**  
+> **/screenshots/contact.png**  
+> **/screenshots/about.png**  
+
+### 🔐 Login Page
+![Login Page](./screenshots/login.png)
+
+### 📝 Signup Page
+![Signup Page](./screenshots/signup.png)
+
+### 📞 Contact Page
+![Contact Page](./screenshots/contact.png)
+
+### ℹ️ About Page
+![About Page](./screenshots/about.png)
+
+---

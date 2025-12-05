@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Search } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,74 +19,67 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-xl shadow-sm" : "bg-transparent"
+        scrolled
+          ? "bg-white/80 backdrop-blur-xl shadow-sm"
+          : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between">
         
-        {/* --------------------- LOGO --------------------- */}
+        {/* LOGO */}
         <Link
           to="/"
-          className={`text-2xl font-bold tracking-tight ${
-            scrolled ? "text-gray-900" : "text-white"
-          }`}
+          className={`text-2xl font-semibold tracking-tight ${menuTextClass}`}
         >
           SkillSphere
         </Link>
 
-        {/* --------------------- CENTER MENU --------------------- */}
+        {/* CENTER MENU */}
         <nav className="hidden md:flex items-center gap-10 text-[15px] font-medium flex-1 justify-center">
-          <Link to="/focus" className={`hover:opacity-70 transition ${menuTextClass}`}>
+          <Link to="/focus" className={`hover:opacity-70 ${menuTextClass}`}>
             Focus areas
           </Link>
 
-          <Link to="/work" className={`hover:opacity-70 transition ${menuTextClass}`}>
+          <Link to="/work" className={`hover:opacity-70 ${menuTextClass}`}>
             How we work
           </Link>
 
-          <Link to="/blog" className={`hover:opacity-70 transition ${menuTextClass}`}>
+          {/* UPDATED — now goes to /blog */}
+          <Link to="/blog" className={`hover:opacity-70 ${menuTextClass}`}>
             News & insights
           </Link>
 
-          <Link to="/about" className={`hover:opacity-70 transition ${menuTextClass}`}>
+          <Link to="/about" className={`hover:opacity-70 ${menuTextClass}`}>
             About
           </Link>
 
-          <Link to="/careers" className={`hover:opacity-70 transition ${menuTextClass}`}>
+          <Link to="/careers" className={`hover:opacity-70 ${menuTextClass}`}>
             Careers
           </Link>
 
-          <Link to="/contact" className={`hover:opacity-70 transition ${menuTextClass}`}>
+          <Link to="/contact" className={`hover:opacity-70 ${menuTextClass}`}>
             Contact
           </Link>
         </nav>
 
-        {/* --------------------- RIGHT SIDE: SEARCH, LOGIN, SIGNUP --------------------- */}
-        <div className="hidden md:flex items-center gap-4">
-          {/* Search icon */}
-          <button
-            className={`${menuTextClass} hover:opacity-80 transition`}
-            aria-label="Search"
-          >
-            <Search className="w-5 h-5" />
-          </button>
+        {/* RIGHT SIDE BUTTONS */}
+        <div className="flex items-center gap-4">
+          <Search
+            className={`w-5 h-5 cursor-pointer hover:opacity-70 ${menuTextClass}`}
+          />
 
-          {/* Login */}
           <Link
             to="/login"
-            className={`px-4 py-1.5 rounded-full border text-sm font-medium transition ${
-              scrolled
-                ? "border-gray-300 text-gray-800 hover:bg-gray-100"
-                : "border-white/70 text-white hover:bg-white/10"
-            }`}
+            className={`px-5 py-1.5 rounded-full border ${
+              scrolled ? "border-gray-800 text-gray-900" : "border-white text-white"
+            } text-sm hover:opacity-70 transition`}
           >
             Login
           </Link>
 
-          {/* Sign Up */}
           <Link
             to="/signup"
-            className="px-4 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-md hover:opacity-90 transition"
+            className="px-5 py-1.5 rounded-full text-sm text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:opacity-80 transition"
           >
             Sign Up
           </Link>
